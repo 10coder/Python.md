@@ -1,15 +1,20 @@
 
-### Array Sorting
+### List 
+
+#### Sorting
 arr.sort() -> inline sorting
 sorted(arr) -> returns sorted list without updating arr
 
 arr.sort(reverse=True) -> inline reverse sorting
 sorted(arr, reverse=True)
+sorted(fruits_list, key= len) -> sorts by length of string
 
 lets say we have negative values [-1, 7, -6, 4] sorts => [-6, -1, 4, 7]
 but if we want to sort with absolute values(not considering signs like negative vals) like [-1, 4, -6, 7]?
 
 sorted(arr, key = lambda x: abs(x))
+
+
 
 <details>
   <summary>Understanding key, lambda function</summary>
@@ -86,6 +91,33 @@ arr.sort()                     # Modifies original list
 words = ["apple", "pie", "banana"]
 sorted(words, key=len)         # ['pie', 'apple', 'banana']
 ```
+
+#### Min/Max
+arr = [-15, 8, 6, 7]
+min(arr) -> reutrns minimum value from the array out -15
+min(arr, key = lambda x: abs(x)) -> returns abs min gives 6
+
+fruits_list = ["pineapple", "orange", "apple"]
+max(fruits_list, key=len) -> returns string with largest length output: pineapple
+
+#### Sum
+summ(arr) -> sum of all values in the array, 
+sumr(arr, start =10) usually sum of all values start with 0, we can make it to start with certain value here it starts with 10 i.e (10 + arr[0] + ..arr[n-1])
+
+#### Prod
+import math
+math.prod(arr) -> product of all the numbers in the array
+
+#### len
+len(arr) -> gives length of array
+
+#### any/all
+arr = [True, False, True]
+
+print(any(arr)) -> gives true as if the array has any True it prints True
+print(all(arr)) -> gives false as all are not True
+
+
 
 ### List Comprehension
 
