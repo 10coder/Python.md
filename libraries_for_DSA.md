@@ -100,7 +100,8 @@ min(arr, key = lambda x: abs(x)) -> returns abs min gives 6
 fruits_list = ["pineapple", "orange", "apple"]
 max(fruits_list, key=len) -> returns string with largest length output: pineapple
 
-#### Sum
+#### Sum 
+Sum of all values in the list
 summ(arr) -> sum of all values in the array, 
 sumr(arr, start =10) usually sum of all values start with 0, we can make it to start with certain value here it starts with 10 i.e (10 + arr[0] + ..arr[n-1])
 
@@ -112,10 +113,16 @@ math.prod(arr) -> product of all the numbers in the array
 len(arr) -> gives length of array
 
 #### any/all
+if any element is present or all are same element
 arr = [True, False, True]
 
 print(any(arr)) -> gives true as if the array has any True it prints True
 print(all(arr)) -> gives false as all are not True
+
+#### Count
+number of times an element occured in the list
+arr = [1,3,2,1]
+arr.count(1) -> output 2
 
 
 
