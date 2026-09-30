@@ -135,6 +135,22 @@ for i,val in list(enumerate(arr)):
   print(i, val)
 ```
 
+#### Reverse the list
+arr = [1,2,3]
+list(reversed(arr)) -> [3,2,1]
+
+#### Range
+range() function in Python is a built-in tool used to generate a sequence of numbers
+range(stop) 
+range(start, stop) -> starts at your custom start value and stops right before the stop value.
+range(start, stop, step)
+
+```
+for i in range(1, 10, 2):
+    print(i)
+# Output: 1, 3, 5, 7, 9  (skips by 2)
+```
+
 
 ### List Comprehension
 
