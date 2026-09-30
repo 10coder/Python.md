@@ -32,7 +32,8 @@ for each element, it calls the key function to get a "sort-by" value, and sorts 
 Question: how does this return with original values although the values transformed internally with key function paramter?
 Ans: key is a temporary transformation function that updates values as per passed function and holds a map of original and transformed values after sorting the original values are retrieved for updated value and passed back.
 
-Additional internal working:
+<details>
+  <summary>Additional internal working</summary>
 Internally, Python does something conceptually like this (called the Schwartzian transform — decorate, sort, undecorate):
 
 ```
@@ -65,7 +66,7 @@ sorting n elements costs n key calls, not n log n key calls.
 |---|---|---|
 | `key` | Tell it *what number/string to compare by* | Call your key function once per element, then sort by those values using Timsort |
 | comparator (old style) | Tell it *which of two items comes first* | Call your function repeatedly during the sort — slower, more code |
-
+</details>
 
 ```
 arr = [3, 1, 4, 1, 5]
