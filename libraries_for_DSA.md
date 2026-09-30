@@ -124,6 +124,16 @@ number of times an element occured in the list
 arr = [1,3,2,1]
 arr.count(1) -> output 2
 
+#### Enumerate 
+returns iterable with (index, value)
+arr = [6, 8, 5]
+enumerate(arr) -> returns iterable object typecast with list(enumerate(arr))
+list(enumerate(arr)) -> [(0,6), (1,8), (2,5)]
+
+```
+for i,val in list(enumerate(arr)):
+  print(i, val)
+```
 
 
 ### List Comprehension
