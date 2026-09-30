@@ -11,6 +11,8 @@ but if we want to sort with absolute values(not considering signs like negative 
 
 sorted(arr, key = lambda x: abs(x))
 
+<details>
+  <summary>Understanding key, lambda function</summary>
 ```
 lambda   x   :   abs(x)
   ↑      ↑        ↑
@@ -31,6 +33,7 @@ for each element, it calls the key function to get a "sort-by" value, and sorts 
 
 Question: how does this return with original values although the values transformed internally with key function paramter?
 Ans: key is a temporary transformation function that updates values as per passed function and holds a map of original and transformed values after sorting the original values are retrieved for updated value and passed back.
+<details>
 
 <details>
   <summary>Additional internal working</summary>
