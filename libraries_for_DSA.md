@@ -82,3 +82,48 @@ arr.sort()                     # Modifies original list
 words = ["apple", "pie", "banana"]
 sorted(words, key=len)         # ['pie', 'apple', 'banana']
 ```
+
+### List Comprehension
+
+To create a list from another iterable -> quick, consise way of doing this
+
+**[expression for item in iterable]**
+• expression: What you want to do to each item before adding it to the new list (e.g., x ** 2, str(x), or just x if you don't want to change it).
+• item: The variable name representing the current element (like x).
+• iterable: The collection you are looping through (like a list, tuple, or range())
+
+The Traditional Way (4 lines)
+```
+numbers = [1, 2, 3, 4]
+squares = []
+
+for x in numbers:
+    squares.append(x ** 2)
+```
+
+The List Comprehension Way (1 line)
+```
+squares = [x ** 2 for x in numbers]
+```
+
+### Dictionaries
+ In Python, dictionaries use square brackets []
+
+for example way to extract list of vip guest names from this list of objects
+ ```
+guests = [
+    {"name": "Alice", "is_vip": True},
+    {"name": "Bob", "is_vip": False},
+    {"name": "Charlie", "is_vip": True},
+    {"name": "David", "is_vip": False}
+]
+ ```
+this is wrong way of list comprehension [g.name() for g in guests if g.is_vip()]
+instead 
+To get the value of a key in a dictionary, write it like this:
+• g["name"] instead of g.name()
+• g["is_vip"] instead of g.is_vip()
+
+Correct way:
+[g["name"] for g in guests if g["is_vip"]]
+
