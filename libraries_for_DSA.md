@@ -106,6 +106,34 @@ The List Comprehension Way (1 line)
 squares = [x ** 2 for x in numbers]
 ```
 
+**Adding Filters with if Conditions**
+You can also add an optional if statement at the very end to filter out items you don't want.
+
+```
+numbers = [1, 2, 3, 4, 5, 6]
+
+# Loop with filter: Only square 'x' IF 'x' is even
+even_squares = [x ** 2 for x in numbers if x % 2 == 0]
+
+print(even_squares)  # Output: [4, 16, 36]
+```
+
+**if/else conditions**
+When you want to filter out items, the if goes at the end.
+But when you want to change/replace items based on a condition, the if-else goes at the beginning.
+
+The Challenge: You have a list of product prices. You want to create a new list of labels. If a price is 100 or more, label it "Expensive". Otherwise, label it "Cheap".
+
+```
+prices = [50, 120, 85, 200]
+```
+
+Solution
+```
+[ "Expensive" if x >= 100 else "Cheap" for x in prices ]
+```
+
+
 ### Dictionaries
  In Python, dictionaries use square brackets []
 
